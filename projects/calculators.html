@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Calculators - My Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="background-canvas"></canvas>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="logo">My Portfolio</h1>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="calculators.html">Calculators</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calculators-hero">
+            <div class="container">
+                <h1>Financial Calculators</h1>
+                <p>Explore my collection of financial calculation tools and programs. Each calculator is designed for personal and professional use when applicable.
+                </p>
+            </div>
+        </section>
+
+        <section class="calculator-section">
+            <div class="container">
+                <div class="calculator-card"><!-- Compound Interest Calculator-->
+                    <h2>Compound Interest Calculator</h2>
+                    <p>This calculator computes the amount you can gain over time with a specific interest rate earned annually.</p>
+                    <div class="calculator-content">
+                        <div class="calculator-interface">
+                            <div class="compound-interest-form">
+                                <form id="compound-interest-form">
+                                    <div class="form-group">
+                                        <label for="principal">Principal Amount ($)</label>
+                                        <input type="number" id="principal" step="0.01" min="0" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="interest-rate">Annual Interest Rate (%)</label>
+                                        <input type="number" id="interest-rate" step="0.01" min="0" max="100" required>
+                                        <small class="form-hint">Safe range: 7% - 10% | Average Range: 10% - 12%</small>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="monthly-contribution">Monthly Contribution ($)</label>
+                                        <input type="number" id="monthly-contribution" step="0.01" min="0" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="years">Time Period (Years)</label>
+                                        <input type="number" id="years" min="1" max="50" required>
+                                    </div>
+
+                                    <p style="color: #888; font-style: italic; margin-bottom: 20px;">Fill in the form above and click Calculate to see your results</p>
+
+                                    <button type="submit" class="btn">Calculate</button>
+                                    <button type="button" id="reset-btn-compound" class="btn" style="background-color: #666; margin-left: 10px;">Reset</button>
+                                </form>
+
+                                    <div id="results" style="margin-top: 20px;">
+                                        <h3>Compounded Results:</h3>
+
+                                        <div class="form-group">
+                                            <label>Final Amount</label>
+                                            <output id="final-amount">--</output>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Total Contributions</label>
+                                            <output id="total-contributions">--</output>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Interest Earned</label>
+                                            <output id="interest-earned">--</output>
+                                        </div>
+
+                                        <div class="form-group" id="formula-section" style="display: none">
+                                            <label>Mathematical Formula Used</label>
+                                            <p id="calculation-formula"></p>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="calculator-code">
+                            <h3>Source Code</h3>
+<pre><code>This code is written in Java:
+
+import java.util.Scanner;
+public class main {
+
+    public static void main(String[] arg){
+
+        Scanner scanner = new Scanner(System.in);
+
+        double principal,
+               rate,
+               monthlyContribution,
+               monthlyRate,
+               amount;
+
+        int years,
+            months;
+
+        System.out.println("\n********************************************");
+        System.out.println("Welcome to the Compound Interest Calculator!");
+        System.out.println("********************************************\n");
+
+        System.out.print("Enter the principal amount: $");
+        principal = scanner.nextDouble();
+
+        System.out.print("Enter the interest rate (in %) you are expecting to get on average: ");
+        rate = scanner.nextDouble() / 100;
+        monthlyRate = rate / 12;
+
+        System.out.print("Enter the amount you plan to contribute monthly: $");
+        monthlyContribution = scanner.nextDouble();
+
+        System.out.print("Enter the number of years: ");
+        years = scanner.nextInt();
+        months = years * 12;
+
+        // Compound interest formula with monthly contribution
+        amount = principal * Math.pow(1 + monthlyRate, months) +
+                 (monthlyContribution * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate));
+
+        System.out.printf("The amount after %d years is: $%,.2f", years, amount);
+
+        scanner.close();
+    }
+}
+
+/*
+Notes: This is a personal compound interest calculator.
+        This calculator is a good reference to see what your investment could be worth over time.
+        This could be used for retirement planning, 529, Roth IRA, etc.
+        A safe rate to use is 7% - 10%. If you are using the S&P 500 as a reference it is around 10-12%
+        Adjustments can be made if you want to do it by age range.
+*/
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-card"><!-- Retirement Calculator-->
+                    <h2>Retirement Calculator</h2>
+                    <p>This calculator will help show how much you could have by the time you are ready to retire.</p>
+                    <div class="calculator-content">
+                        <div class="calculator-interface">
+                            <div class="retirement-form">
+                                <form id="retirement-form">
+                                    <div class="form-group">
+                                        <label for="age">Current Age: </label>
+                                        <input type="number" id="age" step="0.01" min="0" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="retirement-age">Estimated Retirement Age: </label>
+                                        <input type="number" id="retirement-age" step="0.01" min="0" max="100" required>
+                                        <small class="form-hint">You can pull from your retirement accounts penalty free when you reach 59 1/2</small>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="current-amount">Current Amount in Retirement Accounts: ($)</label>
+                                        <input type="number" id="current-amount" step="0.01" min="0" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="monthly-contribution-retirement">Monthly Contribution: ($)</label>
+                                        <input type="number" id="monthly-contribution-retirement" step="0.01" min="0" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="interest-rate-retirement">Projected Annual ROI: (%)</label>
+                                        <input type="number" id="interest-rate-retirement" min="1" max="50" required>
+                                        <small class="form-hint">Average ROI is between 7% - 10%</small>
+                                    </div>
+
+                                    <p style="color: #888; font-style: italic; margin-bottom: 20px;">Fill in the form above and click Calculate to see your results</p>
+
+                                    <button type="submit" class="btn">Calculate</button>
+                                    <button type="button" id="reset-btn-retirement" class="btn" style="background-color: #666; margin-left: 10px;">Reset</button>
+                                </form>
+
+                                    <div id="retirement-results" style="margin-top: 20px;">
+                                        <h3>Retirement Results:</h3>
+
+                                        <div class="form-group">
+                                            <label>Final Amount</label>
+                                            <output id="final-amount-retirement">--</output>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Total Contributions</label>
+                                            <output id="total-contributions-retirement">--</output>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Interest Earned</label>
+                                            <output id="interest-earned-retirement">--</output>
+                                        </div>
+
+                                        <div class="form-group" id="formula-section-retirement" style="display: none;">
+                                            <label>Mathematical Formula Used</label>
+                                            <p id="calculation-formula-retirement"></p>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="calculator-code">
+                            <h3>Source Code</h3>
+                            <pre><code>
+This code is written in Java.
+Note the similarities between this and the compound interest calculator since they use similar principal formulas.
+
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] arg) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        double age,
+                retirementAge,
+                monthlyRate,
+                retirementAmount,
+                monthlyContribution,
+                amount,
+                years,
+                rate,
+                months;
+
+        System.out.println("\n********************************************");
+        System.out.println("Welcome to the Retirement Calculator!");
+        System.out.println("********************************************\n");
+
+        System.out.print("Enter your current age: ");
+        age = scanner.nextDouble();
+
+        System.out.print("Enter the estimated Age you wish to retire: ");
+        retirementAge = scanner.nextDouble();
+        years = retirementAge - age;
+        months = years * 12;
+
+        System.out.print("Enter the current amount you have in retirement: $");
+        retirementAmount = scanner.nextDouble();
+
+        System.out.print("Enter the amount you plan to contribute monthly: $");
+        monthlyContribution = scanner.nextDouble();
+
+        System.out.print("What is the % interest rate (in %) you are expecting to earn: ");
+        rate = scanner.nextDouble() / 100;
+        monthlyRate = rate / 12;
+
+        // Compound interest formula with monthly contribution
+        amount = retirementAmount * Math.pow(1 + monthlyRate, months) +
+                (monthlyContribution * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate));
+
+        System.out.printf("The amount after %d years is: $%,.2f", years, amount);
+
+        scanner.close();
+    }
+}
+
+/*
+Notes: This is a personal retirement calculator.
+        This calculator is a good reference to see what your retirement could be worth over time.
+        I reccommend combining and retirement accounts and put those numbers in the calculator
+        A safe rate to use is 7% - 10%. If you are using the S&P 500 as a reference it is around 10-12%
+*/
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-card"><!-- Emergency Fund Calculator-->
+                    <h2>Emergency Fund Calculator</h2>
+                    <p>Use this to gain a rough idea of what a good emergency fund should look like at different levels. These are just recommended and subject to change due to personal circumstances.</p>
+                    <p>Min = Bare minimum amount | Avg = Average amount | Max = Maximum Amount</p>
+                    <div class="calculator-content">
+                        <div class="calculator-interface">
+                            <div class="compound-interest-form">
+                                <form id="emergency-fund-form">
+                                    <div class="form-group">
+                                        <label for="income">Net Income: ($)</label>
+                                        <input type="number" id="income" min="0" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="housing">Rent/Mortgage: ($)</label>
+                                        <input type="number" id="housing" min="0" required>
+                                        <small class="form-hint">Safe range: 7% - 10% | Average Range: 10% - 12%</small>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="utilities">Utilities: ($)</label>
+                                        <input type="number" id="utilities"  min="0" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="gasoline">Gasoline: ($)</label>
+                                        <input type="number" id="gasoline" min="0" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="internet">Internet:</label>
+                                        <input type="number" id="internet" min="0" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="insurance">Insurances: </label>
+                                        <input type="number" id="insurance" min="0" required>
+                                        <small class="form-hint">This can be a range of insurances from car to life</small>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="groceries">Groceries:</label>
+                                        <input type="number" id="groceries" min="0" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="phone">Phone:</label>
+                                        <input type="number" id="phone" min="0" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="toiletries">Toiletries: </label>
+                                        <input type="number" id="toiletries" min="0" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="debt-minimum">Debt Min Monthly Payments: </label>
+                                        <input type="number" id="debt-minimum" min="0" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="misc">Misc: </label>
+                                        <input type="number" id="misc" min="0" required>
+                                    </div>
+
+                                    <p style="color: #888; font-style: italic; margin-bottom: 20px;">Fill in the form above and click Calculate to see your results. Put in 0 if it does not apply</p>
+                                    <button type="submit" class="btn">Calculate</button>
+                                    <button type="button" id="reset-btn-emergency" class="btn" style="background-color: #666; margin-left: 10px;">Reset</button>
+                                    <p> </p>
+                                </form>
+
+                                    <div id="results" style="margin-top: 20px;">
+                                        <h3>Emergency Fund Results:</h3>
+                                        <p> </p>
+
+                                        <div class="form-group">
+                                            <label>Monthly Disposable Income:</label>
+                                            <output id="remaining-amount">--</output>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Min Amount:</label>
+                                            <output id="minimum-amount">--</output>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Medium Amount:</label>
+                                            <output id="medium-amount">--</output>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Max Amount:</label>
+                                            <output id="max-amount">--</output>
+                                        </div>
+
+                                        <div class="form-group" id="formula-section" style="display: none;">
+                                            <label>Mathematical Formula Used</label>
+                                            <p id="calculation-formula"></p>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="calculator-code">
+                            <h3>Source Code</h3>
+                            <pre><code>This code is written in Java:
+
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] arg) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        double netIncome,
+                rentMortgage,
+                utilities,
+                gasoline,
+                internet,
+                insurances,
+                groceries,
+                phone,
+                toiletries,
+                debtMin,
+                misc,
+                expenses,
+                remainingIncome,
+                eFundMin,
+                eFundThreeMonths,
+                eFundSixMonths,
+                eFundMax;
+
+        System.out.println("\n********************************************");
+        System.out.println("Welcome to the Emergency Fund Calculator!");
+        System.out.println("********************************************\n");
+
+        System.out.print("Enter your monthly net income: $");
+        netIncome = scanner.nextDouble();
+
+        System.out.print("Enter your monthly rent/mortgage amount: $");
+        rentMortgage = scanner.nextDouble();
+
+        System.out.print("Enter your average monthly utility bill: $");
+        utilities = scanner.nextDouble();
+
+        System.out.print("Enter your average monthly gasoline bill: $");
+        gasoline = scanner.nextDouble();
+
+        System.out.print("Enter your average monthly internet bill: $");
+        internet = scanner.nextDouble();
+
+        System.out.print("Enter your average monthly insurance bill: $");
+        insurances = scanner.nextDouble();
+
+        System.out.print("Enter your average monthly grocery bill: $");
+        groceries = scanner.nextDouble();
+
+        System.out.print("Enter your average monthly phone bill: $");
+        phone = scanner.nextDouble();
+
+        System.out.print("Enter your average monthly toiletries bill: $");
+        toiletries = scanner.nextDouble();
+
+        System.out.print("Enter your average monthly debt minimum payment: $");
+        debtMin = scanner.nextDouble();
+
+        System.out.print("Enter your average monthly miscellaneous expense: $");
+        misc = scanner.nextDouble();
+        System.out.println();
+
+        // Mathematics //
+        expenses = rentMortgage + utilities + gasoline + internet + insurances + groceries + phone + toiletries
+                + debtMin + misc;
+
+        remainingIncome = netIncome - expenses;
+
+        eFundMin = expenses;
+        eFundThreeMonths = expenses * 3;
+        eFundSixMonths = expenses * 6;
+        eFundMax = expenses * 12;
+
+        System.out.printf("The disposable amount of income is: $%,.2f\n\n", remainingIncome);
+        System.out.printf("The minimum amount for an emergency fund is: $%,.2f\n", eFundMin);
+        System.out.printf("The medium amount for an emergency fund is: $%,.2f - $%,.2f\n", eFundThreeMonths, eFundSixMonths);
+        System.out.printf("The maximum amount for an emergency fund is: $%,.2f\n", eFundMax);
+        System.out.printf("Any amount beyond this should be invested in retirement or a brokerage account.\n",
+                eFundMax);
+
+        scanner.close();
+    }
+}
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

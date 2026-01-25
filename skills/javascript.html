@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Skills - My Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="logo">My Portfolio</h1>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="javascript.html">Skills</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../projects/calculators.html">Calculators</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Skills Navigation Bar -->
+    <nav class="skills-nav">
+        <div class="container">
+            <div class="skills-nav-links">
+                <a href="html5.html" class="skills-nav-link">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5/CSS3</span>
+                </a>
+                <a href="csharp.html" class="skills-nav-link">
+                    <i class="fab fa-solid fa-file-code"></i>
+                    <span>C#</span>
+                </a>
+                <a href="javascript.html" class="skills-nav-link active">
+                    <i class="fab fa-js-square"></i>
+                    <span>JavaScript</span>
+                </a>
+                <a href="java.html" class="skills-nav-link">
+                    <i class="fab fa-java"></i>
+                    <span>Java</span>
+                </a>
+                <a href="c++.html" class="skills-nav-link">
+                    <i class="fab fa-cuttlefish"></i>
+                    <span>C++</span>
+                </a>
+                <a href="python.html" class="skills-nav-link">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="skill-showcase">
+            <div class="container">
+                <div class="skill-header">
+                    <i class="fab fa-js-square skill-icon"></i>
+                    <h1>JavaScript</h1>
+                    <p>Dynamic programming language for interactive web applications</p>
+                </div>
+
+                <div class="skill-content">
+                    <div class="skill-section">
+                        <h2>What I Know</h2>
+                        <div class="knowledge-grid">
+                            <div class="knowledge-item">
+                                <h3>ES6+ Features</h3>
+                                <p>Arrow functions, destructuring, async/await, modules, and modern JavaScript syntax.</p>
+                            </div>
+                            <div class="knowledge-item">
+                                <h3>DOM Manipulation</h3>
+                                <p>Dynamic content updates, event handling, and creating interactive user interfaces.</p>
+                            </div>
+                            <div class="knowledge-item">
+                                <h3>Asynchronous Programming</h3>
+                                <p>Promises, async/await, and handling API calls with fetch and XMLHttpRequest.</p>
+                            </div>
+                            <div class="knowledge-item">
+                                <h3>Object-Oriented Programming</h3>
+                                <p>Classes, inheritance, prototypes, and design patterns in JavaScript.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-section">
+                        <h2>Code Example</h2>
+                        <div class="code-showcase">
+                            <pre><code>// Modern JavaScript Example
+class Calculator {
+    constructor() {
+        this.result = 0;
+    }
+
+    add(number) {
+        this.result += number;
+        return this;
+    }
+
+    subtract(number) {
+        this.result -= number;
+        return this;
+    }
+
+    multiply(number) {
+        this.result *= number;
+        return this;
+    }
+
+    divide(number) {
+        if (number !== 0) {
+            this.result /= number;
+        }
+        return this;
+    }
+
+    getResult() {
+        return this.result;
+    }
+
+    clear() {
+        this.result = 0;
+        return this;
+    }
+}
+
+// Async function example
+async function fetchUserData(userId) {
+    try {
+        const response = await fetch(`https://api.example.com/users/${userId}`);
+        const userData = await response.json();
+        return userData;
+    } catch (error) {
+        console.error('Error fetching user data:', error);
+        return null;
+    }
+}
+
+// Event handling with modern syntax
+const button = document.querySelector('.calculate-btn');
+button?.addEventListener('click', async () => {
+    const calc = new Calculator();
+    const result = calc.add(10).multiply(2).getResult();
+    console.log('Result:', result);
+});</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- <div class="skill-section">
+                        <h2>Projects Using JavaScript</h2>
+                        <div class="project-showcase">
+                            <div class="mini-project">
+                                <h3></h3>
+                                <p></p>
+                                <a href="../projects/tbd.html" class="btn">View Project</a>
+                            </div>
+                            <div class="mini-project">
+                                <h3></h3>
+                                <p>F</p>
+                                <a href="../projects/tbd.html" class="btn">View Project</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="background-canvas"></canvas>
+
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="logo">My Portfolio</h1>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="projects/calculators.html">Calculators</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Welcome to My Portfolio</h2>
+                <p>A <strong>Software/Mechanical</strong> engineer constantly gaining new skills and knowledge.</p>
+                <a href="#about" class="btn">Learn More</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/mountainBackground.PNG" alt="Profile Image" class="profile-img">
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Hi, I'm Logan Grace, a dedicated software engineer who is passionate about learning and developing new technologies. I have a passion for learning new skills
+                            and techniques to become a growing developer in the technology industry that is alwayse evolving. I love challenging myself to new opportunities to push the limits
+                            of what I can do.</p>
+
+                        <p>My background is more unique than the average software engineer. I got my undergraduate degree in Mechanical Engineering and am working on my Master's in Software Engineering.
+                            I spent most of my post college career working at a flight simulator company mostly as a mechanical engineer. During that time, I gained my curiosity and love for the software
+                            side of the project. Since then I decided to make the changes needed to be a software engineer. I now spend most of my time oustide of work completing my degree and practicing my skills which
+                            some are within this website.
+                        </p>
+
+                        <p>On the personal side about me I enjoy the outdoors and spending time with friends and family. I have seen different parts of the country and enjoy seeing new places. On any given summer day,
+                            you can find me outside with some friends or family probably playing golf. I also have a passion for learning new skills and reading when I have free time.
+                        </p>
+                        <a href="resume/Logan Grace Resume.pdf" class="btn" target="_blank">View Resume</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/treeLean.JPG" alt="About Image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2>Skills & Technologies</h2>
+                <div class="skills-grid">
+                    <a href="skills/html5.html" class="skill-item">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML5/CSS3</h3>
+                    </a>
+                    <a href="skills/css3.html" class="skill-item">
+                        <i class="fab fa-solid fa-file-code"></i>
+                        <h3>C#</h3>
+                    </a>
+                    <a href="skills/javascript.html" class="skill-item">
+                        <i class="fab fa-js-square"></i>
+                        <h3>JavaScript</h3>
+                    </a>
+                    <a href="skills/java.html" class="skill-item">
+                        <i class="fab fa-java"></i>
+                        <h3>Java</h3>
+                    </a>
+                    <a href="skills/c++.html" class="skill-item">
+                        <i class="fab fa-cuttlefish"></i>
+                        <h3>C++</h3>
+                    </a>
+                    <a href="skills/python.html" class="skill-item">
+                        <i class="fab fa-python"></i>
+                        <h3>Python</h3>
+                    </a>
+                    <!-- This is where to add more skills when needed -->
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>My Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="images/project1.jpg" alt="Currency Converter">
+                        <h3>Currency Converter</h3>
+                        <p>A real-time currency converter using live exchange rates from an API.</p>
+                        <a href="projects/project1.html" class="btn">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/project2.jpg" alt="URL Shortener Service">
+                        <h3>URL Shortener Service</h3>
+                        <p>A Spring Boot backend service for shortening URLs with click analytics.</p>
+                        <a href="projects/project2.html" class="btn">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/project3.jpg" alt="Task Management Web App">
+                        <h3>Task Management Web App</h3>
+                        <p>A full-stack task manager with Python FastAPI backend and React frontend.</p>
+                        <a href="projects/project3.html" class="btn">View Project</a>
+                    </div>
+                    <!-- this is the location to add more project tabs -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <div class="contact-content">
+                    <form class="contact-form" action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                    <div class="contact-info">
+                        <h3>Other Methods:</h3>
+                        <a href="mailto:your.email@example.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/logankyle-grace-944378225" target="_blank" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/LGrace9784" target="_blank" class="contact-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio by Logan Grace. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

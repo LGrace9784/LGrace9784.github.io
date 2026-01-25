@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 & CSS3 Skills - My Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="logo">My Portfolio</h1>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="html5.html">Skills</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../projects/calculators.html">Calculators</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Skills Navigation Bar -->
+    <nav class="skills-nav">
+        <div class="container">
+            <div class="skills-nav-links">
+                <a href="html5.html" class="skills-nav-link active">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5/CSS3</span>
+                </a>
+                <a href="csharp.html" class="skills-nav-link">
+                    <i class="fab fa-solid fa-file-code"></i>
+                    <span>C#</span>
+                </a>
+                <a href="javascript.html" class="skills-nav-link">
+                    <i class="fab fa-js-square"></i>
+                    <span>JavaScript</span>
+                </a>
+                <a href="java.html" class="skills-nav-link">
+                    <i class="fab fa-java"></i>
+                    <span>Java</span>
+                </a>
+                <a href="c++.html" class="skills-nav-link">
+                    <i class="fab fa-cuttlefish"></i>
+                    <span>C++</span>
+                </a>
+                <a href="python.html" class="skills-nav-link">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="skill-showcase">
+            <div class="container">
+                <div class="skill-header">
+                    <i class="fab fa-html5 skill-icon"></i>
+                    <h1>HTML5 & CSS3</h1>
+                    <p>HTML5 for structure and CSS3 for styling - The foundation of modern, responsive web development</p>
+                </div>
+
+                <div class="skill-content">
+                    <div class="skill-section">
+                        <h2>What I Know</h2>
+                        <div class="knowledge-grid">
+                            <div class="knowledge-item">
+                                <h3>Forms & Validation</h3>
+                                <p>Creating accessible forms with proper input types, validation attributes, and user-friendly error handling.</p>
+                            </div>
+                            <div class="knowledge-item">
+                                <h3>Flexbox & Grid</h3>
+                                <p>Modern CSS layout systems for creating responsive, flexible designs without floats or positioning hacks.</p>
+                            </div>
+                            <div class="knowledge-item">
+                                <h3>Animations & Transitions</h3>
+                                <p>CSS animations and transitions for enhanced user experience and interactivity.</p>
+                            </div>
+                            <div class="knowledge-item">
+                                <h3>Responsive Design</h3>
+                                <p>Media queries, flexible units, and mobile-first approach for all screen sizes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-section">
+                        <h2>Code Example</h2>
+                        <div class="code-showcase">
+                            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;HTML &amp; CSS Example&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;HTML &amp; CSS Showcase&lt;/h1&gt;
+    &lt;/header&gt;
+
+    &lt;div class="container"&gt;
+        &lt;div class="card"&gt;
+            &lt;h2&gt;Semantic HTML&lt;/h2&gt;
+            &lt;p&gt;Using proper elements for structure.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="card"&gt;
+            &lt;h2&gt;CSS Grid&lt;/h2&gt;
+            &lt;p&gt;Modern layout techniques.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- <div class="skill-section">
+                        <h2>Projects Using HTML5 & CSS3</h2>
+                        <div class="project-showcase">
+                            <div class="mini-project">
+                                <h3></h3>
+                                <p></p>
+                                <a href="../projects/tbd.html" class="btn">View Project</a>
+                            </div>
+                            <div class="mini-project">
+                                <h3></h3>
+                                <p>F</p>
+                                <a href="../projects/tbd.html" class="btn">View Project</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
