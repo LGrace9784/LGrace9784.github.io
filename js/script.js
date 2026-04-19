@@ -22,24 +22,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission
+// Form submission with Formspree
 const contactForm = document.querySelector('.contact-form');
 
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        const formData = new FormData(contactForm);
 
-        // For now, just log to console. In production, send to a server or service like Formspree
-        console.log('Form submitted:', { name, email, message });
-
-        alert('Thank you for your message! I\'ll get back to you soon.');
-
-        // Reset form
-        contactForm.reset();
+        // Send form data to Formspree
+        fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Thank you for your message! I\'ll get back to you soon.');
+                contactForm.reset();
+            } else {
+                alert('Oops! There was a problem submitting your form.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Oops! There was a problem submitting your form.');
+        });
     });
 }
 
