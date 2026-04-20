@@ -334,6 +334,7 @@ function initRetirementCalculator() {
     }
 }
 
+// Emergency fund Calculator
 function initEmergencyFundCalculator() {
     console.log('Initializing emergency fund calculator...'); // If the calculator is giving you issues, uncomment this for DEBUGGING
 
