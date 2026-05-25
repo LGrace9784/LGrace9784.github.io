@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -21,7 +22,6 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="projects/calculators.html">Calculators</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="hamburger">
@@ -50,20 +50,25 @@
                 <h2>About Me</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>Hi, I'm Logan Grace, a dedicated software engineer who is passionate about learning and developing new technologies. I have a passion for learning new skills
-                            and techniques to become a growing developer in the technology industry that is always evolving. I love challenging myself to new opportunities to push the limits
-                            of what I can do.</p>
+                        <p>Hi, I’m Logan Grace, a dedicated software engineer with a passion for learning, problem-solving, and building innovative technology solutions.
+                            I enjoy continuously developing new skills and techniques to grow as a developer in an industry that is constantly evolving.
+                            I’m motivated by challenges and enjoy pushing myself outside of my comfort zone to continue improving both personally and professionally</p>
 
-                        <p>My background is more unique than the average software engineer. I got my undergraduate degree in Mechanical Engineering and am working on my Master's in Software Engineering.
-                            I spent most of my post college career working at a flight simulator company mostly as a mechanical engineer. During that time, I gained my curiosity and love for the software
-                            side of the project. Since then I decided to make the changes needed to be a software engineer. I now spend most of my time oustide of work completing my degree and practicing my skills which
-                            some are within this website.
+                        <p>My background is a little different from the traditional software engineering path. I earned my undergraduate degree in Mechanical Engineering and am currently pursuing a Master’s degree in Software Engineering.
+                            After college, I spent much of my career working at a flight simulator company, primarily as a mechanical engineer.
+                            During that time, I became increasingly interested in the software side of development and discovered how much I enjoyed the problem-solving and creativity involved in building software systems.
+                            That experience ultimately motivated me to transition into software engineering and pursue it as a career.
                         </p>
 
-                        <p>On the personal side about me I enjoy the outdoors and spending time with friends and family. I have seen different parts of the country and enjoy seeing new places. On any given summer day,
-                            you can find me outside with some friends or family probably playing golf. I also have a passion for learning new skills and reading when I have free time.
+                        <p>Today, I spend much of my time outside of work completing my degree, building projects, and continuing to strengthen my technical skills,
+                            many of which are showcased throughout this website. I enjoy learning new technologies and finding opportunities to apply them in meaningful ways
                         </p>
-                        <!-- <a href="resume/Logan Grace Resume.pdf" class="btn" target="_blank">View Resume</a> -->
+
+                        <p>Outside of technology, I enjoy spending time outdoors with friends and family and exploring new places around the country.
+                            On any given summer day, you can probably find me outside playing golf. I also have a strong passion for learning beyond software engineering,
+                            whether that means picking up new skills, reading, or finding new ways to challenge myself
+                        </p>
+                        <a href="resume/Logan's Resume.pdf" class="btn" target="_blank">View Resume</a>
                     </div>
                     <div class="about-image">
                         <img src="images/treeLean.JPG" alt="About Image">
@@ -100,6 +105,10 @@
                         <i class="fab fa-python"></i>
                         <h3>Python</h3>
                     </a>
+                    <a href="skills/technologies.html" class="skill-item">
+                        <i class="fab fa-solid fa-database"></i>
+                        <h3>Technologies</h3>
+                    </a>
                     <!-- This is where to add more skills when needed -->
                 </div>
             </div>
@@ -110,10 +119,34 @@
                 <h2>My Projects</h2>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <img src="images/project1.jpg" alt="Currency Converter">
+                        <img src="images/portfolio.jpg" alt="Financial Analytics/Portfolio Tracker">
+                        <h3>Financial Analytics/Portfolio Tracker</h3>
+                        <p>Finance tracker that displays value based off real time market values for your portfolio.</p>
+                        <a href="projects/portfolioFinance.html" class="btn">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/urlShortener.jpg" alt="URL Shortener">
+                        <h3>URL Shortener</h3>
+                        <p>Program designed to shorten long URLs for easier sharing.</p>
+                        <a href="projects/urlShortener.html" class="btn">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/monthlyFinances.jpg" alt="Monthly Financial">
+                        <h3>Monthly Financial</h3>
+                        <p>A system to allow the user to see real time results of their monthly financial activities and show projections of long term goals.</p>
+                        <a href="projects/monthlyFinances.html" class="btn">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/calculator.jpg" alt="Financial Calculators">
+                        <h3>Financial Calculators</h3>
+                        <p>Modern financial calculators to help predict future value and manage personal finances.</p>
+                        <a href="projects/calculator.html" class="btn">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/currency.jpg" alt="Currency Converter">
                         <h3>Currency Converter</h3>
-                        <p>A real-time currency converter using live exchange rates from an API.</p>
-                        <a href="projects/project1.html" class="btn">View Project</a>
+                        <p>A real-time currency converter using live exchange rates from an external API.</p>
+                        <a href="projects/currency.html" class="btn">View Project</a>
                     </div>
                     <!-- this is the location to add more project tabs -->
                 </div>

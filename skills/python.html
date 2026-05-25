@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python Skills - My Portfolio</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -18,7 +19,6 @@
                     <li><a href="../index.html#about">About</a></li>
                     <li><a href="python.html">Skills</a></li>
                     <li><a href="../index.html#projects">Projects</a></li>
-                    <li><a href="../projects/calculators.html">Calculators</a></li>
                     <li><a href="../index.html#contact">Contact</a></li>
                 </ul>
                 <div class="hamburger">
@@ -57,6 +57,10 @@
                 <a href="python.html" class="skills-nav-link active">
                     <i class="fab fa-python"></i>
                     <span>Python</span>
+                </a>
+                <a href="technologies.html" class="skills-nav-link">
+                    <i class="fab fa-solid fa-database"></i>
+                    <span>Technologies</span>
                 </a>
             </div>
         </div>
@@ -97,109 +101,9 @@
                     </div>
 
                     <div class="skill-section">
-                        <h2>Code Example</h2>
+                        <h2>How I Used It</h2>
                         <div class="code-showcase">
-                            <pre><code"># Python Data Analysis Example
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error
-
-class DataAnalyzer:
-    def __init__(self, data_path):
-        self.data = pd.read_csv(data_path)
-        self.model = None
-
-    def clean_data(self):
-        """Clean and preprocess the data"""
-        # Remove duplicates
-        self.data = self.data.drop_duplicates()
-
-        # Handle missing values
-        self.data = self.data.dropna()
-
-        # Convert data types if needed
-        numeric_columns = self.data.select_dtypes(include=[np.number]).columns
-        for col in numeric_columns:
-            self.data[col] = pd.to_numeric(self.data[col], errors='coerce')
-
-        return self
-
-    def analyze_correlation(self):
-        """Analyze correlations between numeric variables"""
-        numeric_data = self.data.select_dtypes(include=[np.number])
-        correlation_matrix = numeric_data.corr()
-        return correlation_matrix
-
-    def train_linear_model(self, target_column, feature_columns):
-        """Train a simple linear regression model"""
-        X = self.data[feature_columns]
-        y = self.data[target_column]
-
-        X_train, X_test, y_train, y_test = train_test_split(
-            X, y, test_size=0.2, random_state=42
-        )
-
-        self.model = LinearRegression()
-        self.model.fit(X_train, y_train)
-
-        # Make predictions
-        y_pred = self.model.predict(X_test)
-
-        # Calculate metrics
-        mse = mean_squared_error(y_test, y_pred)
-        rmse = np.sqrt(mse)
-
-        return {
-            'model': self.model,
-            'mse': mse,
-            'rmse': rmse,
-            'predictions': y_pred,
-            'actual': y_test
-        }
-
-    def visualize_data(self, x_column, y_column, title="Data Visualization"):
-        """Create a scatter plot of two variables"""
-        plt.figure(figsize=(10, 6))
-        plt.scatter(self.data[x_column], self.data[y_column], alpha=0.6)
-        plt.xlabel(x_column)
-        plt.ylabel(y_column)
-        plt.title(title)
-        plt.grid(True, alpha=0.3)
-        plt.show()
-
-# Flask Web Application Example
-from flask import Flask, request, jsonify
-import json
-
-app = Flask(__name__)
-
-@app.route('/api/analyze', methods=['POST'])
-def analyze_data():
-    try:
-        data = request.get_json()
-        analyzer = DataAnalyzer(data['file_path'])
-
-        # Clean and analyze data
-        analyzer.clean_data()
-        correlations = analyzer.analyze_correlation()
-
-        return jsonify({
-            'status': 'success',
-            'correlations': correlations.to_dict(),
-            'data_shape': analyzer.data.shape
-        })
-
-    except Exception as e:
-        return jsonify({
-            'status': 'error',
-            'message': str(e)
-        }), 400
-
-if __name__ == '__main__':
-    app.run(debug=True)</code></pre>
+                            <p>I used Python to automate data processing, build backend utilities, and support finance-related calculations in my projects. These scripts handled data cleanup, analysis, and the business logic behind the financial tools featured in my portfolio.</p>
                         </div>
                     </div>
 

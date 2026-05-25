@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter - My Portfolio</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        .converter-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .converter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .form-row {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .form-group {
+            flex: 1;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+        input, select {
+            width: 100%;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        .convert-btn {
+            padding: 0.75rem 1.5rem;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .convert-btn:hover {
+            background: #45a049;
+        }
+        .result {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="background-canvas"></canvas>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="logo">My Portfolio</h1>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Projects Navigation Bar -->
+    <nav class="skills-nav">
+        <div class="container">
+            <div class="skills-nav-links">
+                <a href="portfolioFinance.html" class="skills-nav-link active">
+                    <i class="fab fa-dollar-sign"></i>
+                    <span>Portfolio Finance</span>
+                </a>
+                <a href="urlShortener.html" class="skills-nav-link">
+                    <i class="fas fa-link"></i>
+                    <span>URL Shortener</span>
+                </a>
+                <a href="monthlyFinances.html" class="skills-nav-link">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>Monthly Analysis</span>
+                </a>
+                <a href="calculator.html" class="skills-nav-link">
+                    <i class="fa fa-calculator"></i>
+                    <span>Calculators</span>
+                </a>
+                <a href="currency.html" class="skills-nav-link">
+                    <i class="fa-solid fa-exchange-alt"></i>
+                    <span>Converter</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="project-detail">
+            <div class="container">
+                <h1>Financial Analytics/Portfolio Tracker</h1>
+                <div class="project-content">
+                    <div class="project-images">
+                        <img src="../images/portfolio.jpg" alt="Financial Analytics/Portfolio Tracker">
+                        <!-- Add more images as needed -->
+                    </div>
+                    <div class="project-info">
+                        <h2>Description</h2>
+                        <p>Developed a full-stack portfolio tracking application designed to help users monitor investments, analyze portfolio performance,
+                            and manage financial assets in one centralized platform. The application provides real-time portfolio insights, tracks gains and losses,
+                            and delivers a clean, user-friendly interface for managing investment data. The project focused on building scalable backend services,
+                            efficient database management, and responsive frontend functionality while strengthening experience with API development and full-stack
+                            software engineering practices.</p>
+                        <h2>Technologies Used</h2>
+                        <div class="tech-columns">
+                            <ul>
+                                <li>Java</li>
+                                <li>Spring Boot</li>
+                                <li>JavaScript</li>
+                                <li>JSON</li>
+                                <li>React</li>
+                            </ul>
+                            <ul>
+                                <li>Maven</li>
+                                <li>Java Rest API</li>
+                                <li>PostgreSQL</li>
+                                <li>REST API Architecture</li>
+                            </ul>
+                        </div>
+                        <h2>Features</h2>
+                        <ul>
+                            <li>Portfolio value tracking</li>
+                            <li>Investment performance analysis</li>
+                            <li>Real-time gain/loss calculations</li>
+                            <li>API driven backend architecture</li>
+                            <li>Scalable backend structure for expansion</li>
+                            <li>Portfolio diversification overview</li>
+                            <li>Database storage for investment records</li>
+                            <li>Database storage for investment records</li>
+                        </ul>
+                        <div class="project-links">
+                            <!-- <a href=" " class="btn" target="_blank">GitHub Repo</a> -->
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>

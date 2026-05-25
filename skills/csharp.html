@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C# Skills - My Portfolio</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -18,7 +19,6 @@
                     <li><a href="../index.html#about">About</a></li>
                     <li><a href="css3.html">Skills</a></li>
                     <li><a href="../index.html#projects">Projects</a></li>
-                    <li><a href="../projects/calculators.html">Calculators</a></li>
                     <li><a href="../index.html#contact">Contact</a></li>
                 </ul>
                 <div class="hamburger">
@@ -58,6 +58,10 @@
                     <i class="fab fa-python"></i>
                     <span>Python</span>
                 </a>
+                <a href="technologies.html" class="skills-nav-link">
+                    <i class="fab fa-solid fa-database"></i>
+                    <span>Technologies</span>
+                </a>
             </div>
         </div>
     </nav>
@@ -95,31 +99,9 @@
                     </div>
 
                     <div class="skill-section">
-                        <h2>Code Example</h2>
+                        <h2>How I Used It</h2>
                         <div class="code-showcase">
-                            <pre><code>// C# Example: Simple Class with Async Method
-using System;
-using System.Threading.Tasks;
-
-public class Program
-{
-    public static async Task Main(string[] args)
-    {
-        var calculator = new Calculator();
-        int result = await calculator.AddAsync(5, 3);
-        Console.WriteLine($"Result: {result}");
-    }
-}
-
-public class Calculator
-{
-    public async Task&lt;int&gt; AddAsync(int a, int b)
-    {
-        // Simulate async operation
-        await Task.Delay(100);
-        return a + b;
-    }
-}</code></pre>
+                            <p>I used C# to build structured application logic and asynchronous workflows, particularly for console tools and backend services. This experience helped me implement reliable data handling and task-based operations in my projects.</p>
                         </div>
                     </div>
 

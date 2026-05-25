@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Java Skills - My Portfolio</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -18,7 +19,6 @@
                     <li><a href="../index.html#about">About</a></li>
                     <li><a href="java.html">Skills</a></li>
                     <li><a href="../index.html#projects">Projects</a></li>
-                    <li><a href="../projects/calculators.html">Calculators</a></li>
                     <li><a href="../index.html#contact">Contact</a></li>
                 </ul>
                 <div class="hamburger">
@@ -58,6 +58,10 @@
                     <i class="fab fa-python"></i>
                     <span>Python</span>
                 </a>
+                <a href="technologies.html" class="skills-nav-link">
+                    <i class="fab fa-solid fa-database"></i>
+                    <span>Technologies</span>
+                </a>
             </div>
         </div>
     </nav>
@@ -95,69 +99,9 @@
                     </div>
 
                     <div class="skill-section">
-                        <h2>Code Example</h2>
+                        <h2>How I Used It</h2>
                         <div class="code-showcase">
-                            <pre><code>// Java OOP Example - Calculator Class
-public class Calculator {
-    private double result;
-
-    public Calculator() {
-        this.result = 0.0;
-    }
-
-    public Calculator add(double number) {
-        this.result += number;
-        return this;
-    }
-
-    public Calculator subtract(double number) {
-        this.result -= number;
-        return this;
-    }
-
-    public Calculator multiply(double number) {
-        this.result *= number;
-        return this;
-    }
-
-    public Calculator divide(double number) {
-        if (number != 0) {
-            this.result /= number;
-        } else {
-            throw new IllegalArgumentException("Cannot divide by zero");
-        }
-        return this;
-    }
-
-    public double getResult() {
-        return this.result;
-    }
-
-    public Calculator clear() {
-        this.result = 0.0;
-        return this;
-    }
-
-    // Method overloading example
-    public Calculator add(int a, int b) {
-        this.result = a + b;
-        return this;
-    }
-
-    public Calculator add(double a, double b) {
-        this.result = a + b;
-        return this;
-    }
-}
-
-// Usage example with method chaining
-public class Main {
-    public static void main(String[] args) {
-        Calculator calc = new Calculator();
-        double result = calc.add(10).multiply(2).subtract(5).getResult();
-        System.out.println("Result: " + result); // Output: 15.0
-    }
-}</code></pre>
+                            <p>I used Java for object-oriented design, backend logic, and algorithm development. Java helped shape the core application structure, reusable modules, and business logic across my project workflows.</p>
                         </div>
                     </div>
 
